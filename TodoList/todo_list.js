@@ -34,7 +34,7 @@ function displayTasks() {
             displayTasks();
         }
 
-addTaskBtn.addEventListener("click", addTask);
-clearCompletedBtn.addEventListener("click", clearCompletedTasks);
+// addTaskBtn.addEventListener("click", addTask);
+// clearCompletedBtn.addEventListener("click", clearCompletedTasks);
 
- displayTasks();
+// displayTasks();
