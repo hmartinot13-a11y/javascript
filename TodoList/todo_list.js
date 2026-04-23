@@ -24,17 +24,16 @@ function displayTasks() {
             });
         }
 
-        function toggleTask(index) {
+function toggleTask(index) {
             tasks[index].completed = !tasks[index].completed;
             displayTasks();
-        }
+}
 
-    function clearCompletedTasks() {
+function clearCompletedTasks() {
             tasks = tasks.filter(task => !task.completed);
             displayTasks();
-        }
+}
 
-// addTaskBtn.addEventListener("click", addTask);
-// clearCompletedBtn.addEventListener("click", clearCompletedTasks);
-
-// displayTasks();
+addTaskBtn.addEventListener("click", addTask);
+clearCompletedBtn.addEventListener("click", clearCompletedTasks);
+displayTasks();
