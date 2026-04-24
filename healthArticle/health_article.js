@@ -1,13 +1,27 @@
-{
 
+//Access-Control-Allow-Origin: *
+//Access-Control-Allow-Methods: GET, POST
+//Access-Control-Allow-Headers: Content-Type
 var xhr = new XMLHttpRequest();
 var url = './health_article.json';
-
+//var url = 'file:///health_article.json';
+//var url = 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMSkillsNetwork-JS0101EN-SkillsNetwork/health.json';
+xhr.responseType =  'json';
 xhr.open('GET', url, true);
 
-xhr.responseType = 'json';
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      console.log(xhr.response);
+    }
+  };
+  xhr.send();
 
+//console.log(xhr.response.articles);
+xhr.onload = function () {
+if (xhr.status >= 200) {
 var articles = xhr.response.articles;
+      console.log(articles);
+//var articles = xhr.response.articles;
 var articlesDiv = document.getElementById('articles');
 
 articles.forEach(function(article) {
@@ -53,6 +67,9 @@ articles.forEach(function(article) {
 var articleDiv = document.createElement('div');
 articleDiv.classList.add('article');
 articleDiv.appendChild(title);
-xhr.send();
+//xhr.send();
 
-}
+
+    } else {
+      console.error("Error loading JSON:", xhr.status);
+    } };
