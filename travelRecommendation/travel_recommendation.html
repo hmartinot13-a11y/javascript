@@ -4,9 +4,32 @@
   <meta charset="UTF-8">
   <title>Travel Bloom header</title>
   <link rel="stylesheet" href="./TravelBloom.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("background.gif");
+      background-repeat: no-repeat;
+      background-size: cover;        /* Ensures full coverage */
+      background-position: center;   /* Centers the image */
+      background-attachment: fixed;  /* Optional: keeps image fixed while scrolling */
+    }
+    h1 {
+      color: white;
+      text-align: center;
+      /*margin-top: 40vh;*/
+      font-family: Arial, sans-serif;
+      text-shadow: 0 0 10px black;
+    }
+    p {
+      color: white;
+      text-align: center;
+    }
+
+  </style>
 </head>
 <body>
-   <nav><h1>TravelBloom</h1>
+    <nav><h1>TravelBloom</h1>
        <ul>
           <li><a href="./travel_recommendation.html" id="home">Home </a></li>
           <li><a href="./AboutUs.html" id="home">About Us </a></li>
@@ -16,9 +39,12 @@
           <li><button id='btnReset'>Clear</button></li>
         </ul>
     </nav>
+    
     <div class="container">
-           <h1>EXPLORE DREAM DESTINATION</h1>
-           <p>The travel recommendation ... </p>
+
+        <h1>EXPLORE DREAM DESTINATION</h1>
+        <p>The travel recommendation ... </p>
+    
     </div>
     <script src="./travel_recommendation.js"></script>
 </body>
