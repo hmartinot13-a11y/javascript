@@ -52,6 +52,15 @@
       background: #555;
       transform: scale(1.1);
     }
+    .rowDiv {
+      display: flex; /* Place les enfants en ligne */
+    }
+    .columnDiv {
+      flex: 1; /* Chaque colonne prend une part égale */
+      padding: 10px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
@@ -81,8 +90,30 @@
 
         <h1>EXPLORE DREAM DESTINATION</h1>
         <p>The travel recommendation ... </p>
-        <div id="resultDiv"></div>
-
+        <div id="resultDiv1" class="rowDiv">
+           <div id="resultDiv11" class="columnDiv">
+               <!--Colonne 1 - contenu ici-->
+           </div>
+           <div id="resultDiv12" class="columnDiv">
+               <!--Colonne 2 - contenu ici-->
+           </div>
+        </div>
+        <div id="resultDiv2" class="rowDiv">
+           <div id="resultDiv21" class="columnDiv">
+               <!--Colonne 1 - contenu ici-->
+           </div>
+           <div id="resultDiv22" class="columnDiv">
+               <!--Colonne 2 - contenu ici-->
+           </div>
+        </div>
+        <div id="resultDiv3" class="rowDiv">
+           <div id="resultDiv31" class="columnDiv">
+               <!--Colonne 1 - contenu ici-->
+           </div>
+           <div id="resultDiv32" class="columnDiv">
+               <!--Colonne 2 - contenu ici-->
+           </div>
+        </div>
     </div>
     <script src="./travel_recommendation.js"></script>
 </body>
