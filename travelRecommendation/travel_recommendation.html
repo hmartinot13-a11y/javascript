@@ -58,8 +58,8 @@
     .columnDiv {
       flex: 1; /* Chaque colonne prend une part égale */
       padding: 10px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
+      /*border: 1px solid #ccc;
+      box-sizing: border-box;*/
     }
   </style>
 </head>
@@ -74,46 +74,66 @@
           <li><button id='btnReset' Onclick=thankyou()>Clear</button></li>
           <script>
             function thankyou(){
-                alert('Thank you for Clicking!')
+                //alert('Thank you for Clicking!')
                 resetSearch();
             }
           </script>
         </ul>
     </nav>
-    <div class="social-bar">
-       <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"><img src="images/facebook.png" alt="Facebook"></i></a>
-       <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-       <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-       <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-    </div>
-    <div class="container">
+    <div id="resultDiv0" /*class="rowDiv"*/>
+        
+        <div class="social-bar" class="columnDiv">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
 
-        <h1>EXPLORE DREAM DESTINATION</h1>
-        <p>The travel recommendation ... </p>
-        <div id="resultDiv1" class="rowDiv">
-           <div id="resultDiv11" class="columnDiv">
+        <div id="resultDiv1" class="columnDiv">
+            
+            <h1>EXPLORE DREAM DESTINATION</h1>
+            <p>The travel recommendation ... <br></p>
+            
+            <div id="resultDiv2" class="rowDiv">
+               <div id="resultDiv10" class="columnDiv">
+                    <!--Colonne 0 - contenu ici-->
+               </div>
+               <div id="resultDiv11" class="columnDiv">
                <!--Colonne 1 - contenu ici-->
-           </div>
-           <div id="resultDiv12" class="columnDiv">
+               </div>
+               <div id="resultDiv12" class="columnDiv">
                <!--Colonne 2 - contenu ici-->
-           </div>
-        </div>
-        <div id="resultDiv2" class="rowDiv">
-           <div id="resultDiv21" class="columnDiv">
+               </div>
+            
+            </div>
+            
+            <div id="resultDiv3" class="rowDiv">
+                <div id="resultDiv20" class="columnDiv">
+                    <!--Colonne 0 - contenu ici-->
+               </div>
+                <div id="resultDiv21" class="columnDiv">
                <!--Colonne 1 - contenu ici-->
-           </div>
-           <div id="resultDiv22" class="columnDiv">
+               </div>
+               <div id="resultDiv22" class="columnDiv">
                <!--Colonne 2 - contenu ici-->
-           </div>
-        </div>
-        <div id="resultDiv3" class="rowDiv">
-           <div id="resultDiv31" class="columnDiv">
+               </div>
+            </div>
+            
+            <div id="resultDiv4" class="rowDiv">
+                <div id="resultDiv30" class="columnDiv">
+                    <!--Colonne 0 - contenu ici-->
+               </div>
+                <div id="resultDiv31" class="columnDiv">
                <!--Colonne 1 - contenu ici-->
-           </div>
-           <div id="resultDiv32" class="columnDiv">
+               </div>
+               <div id="resultDiv32" class="columnDiv">
                <!--Colonne 2 - contenu ici-->
-           </div>
+               </div>
+            
+            </div>
+        
         </div>
+    
     </div>
     <script src="./travel_recommendation.js"></script>
 </body>

@@ -14,9 +14,6 @@ function resetSearch() {
 
 function searchCondition() {
     const input = document.getElementById('conditionInput').value.toLowerCase();
-	//const result1 = document.getElementById('resultDiv1');
-	//const result2 = document.getElementById('resultDiv2');
-    //const result3 = document.getElementById('resultDiv3');
     resultDiv11.innerHTML = '';
     resultDiv12.innerHTML = '';
     resultDiv21.innerHTML = '';
@@ -50,36 +47,24 @@ function searchCondition() {
                 });
             }
       })
-
+      data.temples.forEach(temple => {
+          if (temple.name.toLowerCase() === input) {
+                        resultDiv11.innerHTML += `<img src="${temple.imageUrl}" alt="hjh">`;
+                        resultDiv21.innerHTML += `<h2>${temple.name}</h2>`;
+                        resultDiv31.innerHTML += `<p><strong>Description:</strong>${temple.description}</p>`;
+            }
+      })
+       data.beaches.forEach(beach => {
+          if (beach.name.toLowerCase() === input) {
+                        resultDiv11.innerHTML += `<img src="${beach.imageUrl}" alt="hjh">`;
+                        resultDiv21.innerHTML += `<h2>${beach.name}</h2>`;
+                        resultDiv31.innerHTML += `<p><strong>Description:</strong>${beach.description}</p>`;
+            }
+      })
       .catch(error => {
         console.error('Erreur:', error);
       });
     })
 }
-            
-/*	if (theCondition === temples) {
-			  const temples = theCondition.temples.join(', ');
-			  resultDiv.innerHTML += `<img src="${temples.imageUrl}" alt="hjh">`;
-			  resultDiv.innerHTML += `<h2>${temples.name}</h2>`;
-			  resultDiv.innerHTML += `<p><strong>Description:</strong> ${temples.description}</p>`;
-	} else {
-			  resultDiv.innerHTML = 'temples not found.';
-	}
-
-	if (theCondition === beaches) {
-			  const beaches = theCondition.beaches.join(', ');
-			  resultDiv.innerHTML += `<img src="${beaches.imageUrl}" alt="hjh">`;
-			  resultDiv.innerHTML += `<h2>${beaches.name}</h2>`;
-			  resultDiv.innerHTML += `<p><strong>Description:</strong> ${beaches.description}</p>`;
-	} else {
-			resultDiv.innerHTML = 'beaches not found.';
-	} 
-
-	})
-	.catch(error => {
-			console.error('Error:', error);
-			resultDiv.innerHTML = 'An error occurred while fetching data.';
-	});*/
-
 btnSearch.addEventListener('click', searchCondition);
 
