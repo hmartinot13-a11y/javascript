@@ -47,6 +47,18 @@
       color: white;
       text-align: center;
     }
+    .rowDiv {
+       /*text-align: center;*/
+       display: flex; /* Place les enfants en ligne */
+       text-align: center;
+       justify-content: center;
+    }
+    .columnDiv {
+      flex: 1; /* Chaque colonne prend une part égale */
+      padding: 10px;
+      /*border: 1px solid #ccc;
+      box-sizing: border-box;*/
+    }
   </style>
 </head>
 <body>
@@ -57,18 +69,28 @@
       </li>
     </ul>
   </nav>
-  <div id="AboutUs">
+  <div id="AboutUs0" class="rowDiv">
     <h1>ABOUT US</h1>
-    <p>New about us.</p>
   </div>
-  <div id="OurTeam">
-    <div>
+  <div id="AboutUs1" class="rowDiv">  
+    <p>Azur Horizons Voyages is a travel agency specializing in creating tailor-made trips in France and internationally. For over 15 years, we have been helping our clients realize their travel dreams, whether it's a weekend getaway in Europe, a cultural tour, a beach holiday, or an off-the-beaten-path adventure.
+    Our team of passionate travel advisors puts its expertise at the service of each traveler to offer personalized itineraries, adapted to their individual desires, budget, and pace. Thanks to a network of reliable partners worldwide, we guarantee high-quality services and a smooth, safe, and unforgettable travel experience.</p>
+  </div>
+  <div id="OurTeam" class="rowDiv">
+    <div class="columnDiv">
+        <h1>OUR TEAM</h1>
     </div>
-    <div>
+    <div class="columnDiv">
+        <p>John Doe</p>
+        <p>John is the CEO for more than 20 years. A reference in the travelling sector</p>
     </div>
-    <div>
+    <div class="columnDiv">
+        <p>Celina Thomas</p>
+        <p>responsible for marketing departement</p>
     </div>
-    <div>
+    <div class="columnDiv">
+        <p>Mike Tyson</p>
+        <p>Mike manages product delivery and client relashionship</p>
     </div>
   </div>
 </body>
