@@ -44,26 +44,54 @@ function searchCondition() {
                         resultDiv32.innerHTML += `<p><strong>Description:</strong>${city.description}</p>`;
                         i = 0; 
                 }
-                });
+                })
             }
       })
       data.temples.forEach(temple => {
-          if (temple.name.toLowerCase() === input) {
+      if (input === "temples") {
+                if (i===0){
                         resultDiv11.innerHTML += `<img src="${temple.imageUrl}" alt="hjh">`;
                         resultDiv21.innerHTML += `<h2>${temple.name}</h2>`;
                         resultDiv31.innerHTML += `<p><strong>Description:</strong>${temple.description}</p>`;
-            }
+                        i += 1; 
+                    } else {
+                        resultDiv12.innerHTML += `<img src="${temple.imageUrl}" alt="hjh">`;
+                        resultDiv22.innerHTML += `<h2>${temple.name}</h2>`;
+                        resultDiv32.innerHTML += `<p><strong>Description:</strong>${temple.description}</p>`;
+                        i = 0; 
+                }
+      } else {
+                if (temple.name.toLowerCase() === input) {
+                        resultDiv11.innerHTML += `<img src="${temple.imageUrl}" alt="hjh">`;
+                        resultDiv21.innerHTML += `<h2>${temple.name}</h2>`;
+                        resultDiv31.innerHTML += `<p><strong>Description:</strong>${temple.description}</p>`;
+                }
+      }
       })
-       data.beaches.forEach(beach => {
+      data.beaches.forEach(beach => {
+      if (input === "beaches") {
+                if (i===0){
+                        resultDiv11.innerHTML += `<img src="${beach.imageUrl}" alt="hjh">`;
+                        resultDiv21.innerHTML += `<h2>${beach.name}</h2>`;
+                        resultDiv31.innerHTML += `<p><strong>Description:</strong>${beach.description}</p>`;
+                        i += 1; 
+                    } else {
+                        resultDiv12.innerHTML += `<img src="${beach.imageUrl}" alt="hjh">`;
+                        resultDiv22.innerHTML += `<h2>${beach.name}</h2>`;
+                        resultDiv32.innerHTML += `<p><strong>Description:</strong>${beach.description}</p>`;
+                        i = 0; 
+                }  
+      } else {
           if (beach.name.toLowerCase() === input) {
                         resultDiv11.innerHTML += `<img src="${beach.imageUrl}" alt="hjh">`;
                         resultDiv21.innerHTML += `<h2>${beach.name}</h2>`;
                         resultDiv31.innerHTML += `<p><strong>Description:</strong>${beach.description}</p>`;
             }
-      })
+      }
+      })    
       .catch(error => {
         console.error('Erreur:', error);
-      });
+      })
     })
 }
 btnSearch.addEventListener('click', searchCondition);
